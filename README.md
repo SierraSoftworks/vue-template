@@ -1,4 +1,4 @@
-# vue-template
+# vue-template [![Build Status](https://travis-ci.org/SierraSoftworks/vue-template.svg?branch=master)](https://travis-ci.org/SierraSoftworks/vue-template)
 **An ultra-lightweight Vue web application template**
 
 This template tries to push the limits of how light a Vue application can
