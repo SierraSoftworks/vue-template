@@ -16,6 +16,7 @@ the great libraries available for Vue.js.
  - Material Icons
  - Markdown Support
  - Browser-Sync
+ - Builds a Docker container
 
 There are also a number of example filters, components and views to showcase
 how to use the template, not to mention a store implementation and API client.
