@@ -1,0 +1,8 @@
+sudo: required
+language: node_js
+
+services:
+  - docker
+
+script:
+  - docker build -t sierrasoftworks/vue-template:latest .
