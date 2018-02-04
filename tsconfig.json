@@ -1,0 +1,17 @@
+{
+    "include": [
+        "src/**/*.ts"
+    ],
+    "compilerOptions": {
+        "target": "es6",
+        "module": "amd",
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "allowJs": true,
+        "lib": [
+            "es2015",
+            "dom"
+        ],
+        "outFile": "src/bundle.js"
+    }
+}
