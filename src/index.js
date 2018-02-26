@@ -13,7 +13,8 @@ require.config({
         "vue-class-component": "https://cdn.jsdelivr.net/npm/vue-class-component@6.1.2/dist/vue-class-component.min",
 
         "moment": "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min",
-        "showdown": "https://cdnjs.cloudflare.com/ajax/libs/showdown/1.7.1/showdown.min"
+        "showdown": "https://cdnjs.cloudflare.com/ajax/libs/showdown/1.7.1/showdown.min",
+        "text": "https://cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text.min"
     },
     map: {
         "*": {
