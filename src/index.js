@@ -13,8 +13,9 @@ require.config({
         "vue-class-component": "https://cdn.jsdelivr.net/npm/vue-class-component@6.1.2/dist/vue-class-component.min",
 
         "moment": "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min",
-        "showdown": "https://cdnjs.cloudflare.com/ajax/libs/showdown/1.7.1/showdown.min",
-        "text": "https://cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text.min"
+        "markdown-it": "https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.4.1/markdown-it.min",
+        "text": "https://cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text.min",
+        "highlight-js": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min"
     },
     map: {
         "*": {
