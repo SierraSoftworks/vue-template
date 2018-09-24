@@ -10,8 +10,7 @@
     "license": "MIT",
     "scripts": {
         "start": "node dev.js",
-        "build": "tsc",
-        "watch": "tsc --watch"
+        "build": "tsc"
     },
     "devDependencies": {
         "@types/highlight.js": "^9.12.2",
