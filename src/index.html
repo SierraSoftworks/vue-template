@@ -1,57 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>vue-template</title>
 
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="https://unpkg.com/element-ui@2.x/lib/theme-chalk/index.css">
-        <link rel="stylesheet" href="/index.css">
+<head>
+    <title>vue-template</title>
 
-        <script src="https://unpkg.com/vue@2.x"></script>
-        <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-        <script src="https://unpkg.com/vuex"></script>
-        <script src="https://unpkg.com/element-ui@2.x/lib/index.js"></script>
-        <script src="https://unpkg.com/element-ui@2.x/lib/umd/locale/en.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/element-ui/2.4.6/theme-chalk/index.css"
+        integrity="sha256-DN11eElzQUZ0Tj28MFaeHlV1oeG18m9ZjU7MM1xYkRA=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/index.css">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
-    <body>
-        <div id="app">
-            <el-container class="tac">
-                <el-aside width="300px" class="dark side-menu">
-                    <el-row>
-                        <el-col class="sidebar-title" :span="24">
-                            <h2>
-                                <i class="material-icons">extension</i>
-                                vue-template
-                            </h2>
-                        </el-col>
-                    </el-row>
-                    
-                    <el-row>
-                        <el-col :span="24">
-                            <el-menu :router="true" theme="dark">
-                                <el-menu-item index="/">
-                                    <i class="material-icons">home</i>
-                                    Home
-                                </el-menu-item>
-                            </el-menu>
-                        </el-col>
-                    </el-row>
-                </el-aside>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js" integrity="sha256-FtWfRI+thWlNz2sB3SJbwKx5PgMyKIVgwHCTwa3biXc="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.1/vue-router.min.js" integrity="sha256-yEB9jUlD51i5kxJZlzgzfR6XmVKI76Nl1WRA1aqIilU="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/3.0.1/vuex.min.js" integrity="sha256-1QlN0ckC4jlz91DZixPZxTv9vYpcBmS7sK7HA8xFmFA="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/element-ui/2.4.6/index.js" integrity="sha256-XJ25r/1aIf2QTGyiTh3eIaQAWb0dk7QGETFii09X3o0="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/element-ui/2.4.6/locale/en.min.js" integrity="sha256-utoayYoNULaBYPcpVdcIgCpAtuBhafm3ykKQOXm3UNM="
+        crossorigin="anonymous"></script>
 
-                <el-main class="vh-full router-view" v-loading.body="loading">
-                    <router-view :key="$route.fullPath"></router-view>
-                </el-main>
-            </el-container>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
 
-        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js" data-main="/require.js"></script>
-        <script src="/bundle.js"></script>
-        
-        <script src="https://unpkg.com/element-ui@2.x/lib/index.js"></script>
-        <script src="https://unpkg.com/element-ui@2.x/lib/umd/locale/en.js"></script>
+<body>
+    <div id="app">
+        <el-container class="tac">
+            <el-aside width="300px" class="dark side-menu">
+                <el-row>
+                    <el-col class="sidebar-title" :span="24">
+                        <h2>
+                            <i class="material-icons">extension</i>
+                            vue-template
+                        </h2>
+                    </el-col>
+                </el-row>
 
-        <script src="/index.js"></script>
-    </body>
+                <el-row>
+                    <el-col :span="24">
+                        <el-menu :router="true" theme="dark">
+                            <el-menu-item index="/">
+                                <i class="material-icons">home</i>
+                                Home
+                            </el-menu-item>
+                        </el-menu>
+                    </el-col>
+                </el-row>
+            </el-aside>
+
+            <el-main class="vh-full router-view" v-loading.body="loading">
+                <router-view :key="$route.fullPath"></router-view>
+            </el-main>
+        </el-container>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js" data-main="/require.js"></script>
+    <script src="/bundle.js"></script>
+
+    <script src="/index.js"></script>
+</body>
+
 </html>

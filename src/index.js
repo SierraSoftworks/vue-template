@@ -37,9 +37,6 @@ require.config({
         },
         "moment": {
             exports: "moment"
-        },
-        "showdown": {
-            exports: "showdown"
         }
     }
 })
@@ -48,5 +45,5 @@ define("vue", ["vue-module"], (Vue) => ({ "default": Vue }))
 define("vue-router", ["vue-router-module"], (VueRouter) => ({ "default": VueRouter }))
 
 requirejs(["vue", "element-ui"], (Vue, ELEMENT) => {
-    requirejs(["app"], function(app) {})
+    requirejs(["app"], function (app) { })
 })

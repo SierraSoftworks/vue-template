@@ -1,12 +1,11 @@
 import Vue from "vue";
-import VueRouter from "vue-router";
 
 import "./components/index";
 import "./filters/index";
 import "./views/index";
 
-import {store} from "./store";
-import {router} from "./router";
+import { store } from "./store";
+import { router } from "./router";
 
 export const app = new Vue({
     el: "#app",
@@ -22,7 +21,7 @@ export const app = new Vue({
         api() {
             return this.$store.state.api
         },
-        
+
         username() {
             return this.$store.state.username
         },
@@ -41,6 +40,6 @@ export const app = new Vue({
         }
     },
     methods: {
-        
+
     }
 })
