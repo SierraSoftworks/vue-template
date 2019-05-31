@@ -14,16 +14,16 @@
     },
     "devDependencies": {
         "@types/highlight.js": "^9.12.3",
-        "@types/markdown-it": "0.0.4",
+        "@types/markdown-it": "0.0.7",
         "@types/moment": "^2.13.0",
         "@types/requirejs": "^2.1.31",
-        "browser-sync": "^2.24.7",
-        "connect-history-api-fallback": "^1.5.0",
-        "typescript": "^2.9.2",
-        "vue": "^2.5.17",
-        "vue-class-component": "^6.2.0",
-        "vue-router": "^3.0.1",
-        "vuex": "^3.0.1"
+        "browser-sync": "^2.26.5",
+        "connect-history-api-fallback": "^1.6.0",
+        "typescript": "^3.5.1",
+        "vue": "^2.6.10",
+        "vue-class-component": "^7.1.0",
+        "vue-router": "^3.0.6",
+        "vuex": "^3.1.1"
     },
     "dependencies": {}
 }

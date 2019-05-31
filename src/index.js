@@ -10,12 +10,12 @@ require.config({
         "vuex": "from-cdn",
         "vue-router-module": "from-cdn",
         "element-ui": "from-cdn",
-        "vue-class-component": "https://cdn.jsdelivr.net/npm/vue-class-component@6.1.2/dist/vue-class-component.min",
+        "vue-class-component": "https://cdn.jsdelivr.net/npm/vue-class-component@7.1.0/dist/vue-class-component.min",
 
-        "moment": "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min",
-        "markdown-it": "https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.4.1/markdown-it.min",
+        "moment": "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min",
+        "markdown-it": "https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.4.2/markdown-it.min",
         "text": "https://cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text.min",
-        "highlight-js": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min"
+        "highlight-js": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.8/highlight.min"
     },
     map: {
         "*": {
