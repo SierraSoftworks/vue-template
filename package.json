@@ -15,11 +15,11 @@
     "devDependencies": {
         "@types/highlight.js": "^9.12.3",
         "@types/markdown-it": "0.0.8",
-        "@types/moment": "^2.13.0",
         "@types/requirejs": "^2.1.31",
         "browser-sync": "^2.26.7",
         "connect-history-api-fallback": "^1.6.0",
-        "typescript": "^3.6.2",
+        "dayjs": "^1.8.16",
+        "typescript": "^3.6.4",
         "vue": "^2.6.10",
         "vue-class-component": "^7.1.0",
         "vue-router": "^3.1.3",
