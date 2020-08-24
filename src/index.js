@@ -1,9 +1,8 @@
+const isDebug = window.location.hostname === "localhost";
+const debugSuffix = isDebug ? "" : ".min"
+
 require.config({
     paths: {
-        "vue-class-component": "https://cdn.jsdelivr.net/npm/vue-class-component@7.1.0/dist/vue-class-component.min",
-        "highlight-js": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min",
-        "markdown-it": "https://cdnjs.cloudflare.com/ajax/libs/markdown-it/9.1.0/markdown-it.min",
-        "text": "https://cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text.min",
     },
     map: {
         "*": {
@@ -13,28 +12,48 @@ require.config({
     packages: [
         {
             name: "vue-module",
-            location: "https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10",
-            main: "vue"
+            location: "https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12",
+            main: "vue" + debugSuffix
         },
         {
             name: "vue-router-module",
-            location: "https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.1.3",
-            main: "vue-router"
+            location: "https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.4.3",
+            main: "vue-router" + debugSuffix
         },
         {
             name: "vuex",
-            location: "https://cdnjs.cloudflare.com/ajax/libs/vuex/3.1.1",
-            main: "vuex"
+            location: "https://cdnjs.cloudflare.com/ajax/libs/vuex/3.5.1",
+            main: "vuex" + debugSuffix
         },
         {
             name: "dayjs",
-            location: "https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.8.16",
+            location: "https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.8.34",
             main: "dayjs.min"
         },
         {
             name: "ELEMENT",
-            location: "https://cdnjs.cloudflare.com/ajax/libs/element-ui/2.12.0",
+            location: "https://cdnjs.cloudflare.com/ajax/libs/element-ui/2.13.2",
             main: "index"
+        },
+        {
+            name: "vue-class-component",
+            location: "https://cdn.jsdelivr.net/npm/vue-class-component@7.2.5",
+            main: "dist/vue-class-component" + debugSuffix
+        },
+        {
+            name: "highlight-js",
+            location: "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3",
+            main: "highlight.min"
+        },
+        {
+            name: "markdown-it",
+            location: "https://cdnjs.cloudflare.com/ajax/libs/markdown-it/11.0.0",
+            main: "markdown-it" + debugSuffix
+        },
+        {
+            name: "text",
+            location: "https://cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12",
+            main: "text" + debugSuffix
         }
     ],
     shim: {
