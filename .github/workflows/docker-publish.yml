@@ -1,41 +1,25 @@
 name: Docker
-
 on:
   push:
-    # Publish `main` as Docker `latest` image.
-    branches:
-      - main
-
-    # Publish `v1.2.3` tags as releases.
-    tags:
-      - v*
-
-  # Run tests for any PRs.
+    branches: [ main ]
   pull_request:
+    branches: [ main ]
+
+env:
+  IMAGE: sierrasoftworks/vue-template
 
 jobs:
-  # Run tests.
-  # See also https://docs.docker.com/docker-hub/builds/automated-testing/
   test:
     runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
 
     steps:
       - uses: actions/checkout@v2
 
-      - name: Run tests
-        run: |
-          if [ -f docker-compose.test.yml ]; then
-            docker-compose --file docker-compose.test.yml build
-            docker-compose --file docker-compose.test.yml run sut
-          else
-            docker build . --file Dockerfile
-          fi
-
-  # Push image to GitHub Packages.
-  # See also https://docs.docker.com/docker-hub/builds/
+      - name: Build Dockerfile
+        run: docker build . --file Dockerfile
+          
   push:
-    # Ensure test job passes before pushing image.
-    needs: test
 
     runs-on: ubuntu-latest
     if: github.event_name == 'push'
@@ -46,27 +30,31 @@ jobs:
       - name: Build image
         run: docker build . --file Dockerfile --tag image
 
-      - name: Log into registry
-        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
-
-      - name: Push image
+      - name: Log into registries
+        run: |
+          echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
+          echo "${{ secrets.DOCKER_HUB }}" | docker login -u ${{ secrets.DOCKER_HUB_USERNAME }} --password-stdin
+          
+      - name: Calculate version number
+        id: version
+        run: |
+          VERSION=$(git describe --tags 2>/dev/null || git rev-parse --short HEAD)
+          echo "::set-output name=version::$VERSION"
+          
+      - name: Push image to GitHub
         run: |
           IMAGE_ID=docker.pkg.github.com/${{ github.repository }}/${{ github.event.repository.name }}
-
-          # Change all uppercase to lowercase
           IMAGE_ID=$(echo $IMAGE_ID | tr '[A-Z]' '[a-z]')
-
-          # Strip git ref prefix from version
-          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
-
-          # Strip "v" prefix from tag name
-          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
-
-          # Use Docker `latest` tag convention
-          [ "$VERSION" == "main" ] && VERSION=latest
-
+          docker tag image $IMAGE_ID:latest
+          docker push $IMAGE_ID:latest
+          docker tag image $IMAGE_ID:${{ steps.version.outputs.version }}
+          docker push $IMAGE_ID:${{ steps.version.outputs.version }}
+          
+      - name: Push image to Docker Hub
+        run: |
+          IMAGE_ID=${{ env.IMAGE }}
           echo IMAGE_ID=$IMAGE_ID
-          echo VERSION=$VERSION
-
-          docker tag image $IMAGE_ID:$VERSION
-          docker push $IMAGE_ID:$VERSION
+          docker tag image $IMAGE_ID:latest
+          docker push $IMAGE_ID:latest
+          docker tag image $IMAGE_ID:${{ steps.version.outputs.version }}
+          docker push $IMAGE_ID:${{ steps.version.outputs.version }}
