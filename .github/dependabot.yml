@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - directory: /
+    package-ecosystem: npm
+    schedule:
+      interval: daily
+  - directory: /
+    package-ecosystem: docker
+    schedule:
+      interval: daily
+  - directory: /.github/workflows
+    package-ecosystem: github-actions
+    schedule:
+      interval: daily
