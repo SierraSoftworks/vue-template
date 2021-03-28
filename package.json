@@ -17,7 +17,7 @@
         "@types/markdown-it": "^10.0.2",
         "@types/punycode": "^2.1.0",
         "@types/requirejs": "^2.1.32",
-        "browser-sync": "^2.26.12",
+        "browser-sync": "^2.26.14",
         "connect-history-api-fallback": "^1.6.0",
         "dayjs": "^1.9.1",
         "typescript": "^4.2.3",
