@@ -13,7 +13,7 @@
         "build": "tsc"
     },
     "devDependencies": {
-        "@types/highlight.js": "^9.12.4",
+        "@types/highlight.js": "^10.1.0",
         "@types/markdown-it": "^10.0.2",
         "@types/punycode": "^2.1.0",
         "@types/requirejs": "^2.1.32",
