@@ -18,7 +18,7 @@
         "@types/punycode": "^2.1.0",
         "@types/requirejs": "^2.1.34",
         "browser-sync": "^2.27.7",
-        "connect-history-api-fallback": "^1.6.0",
+        "connect-history-api-fallback": "^2.0.0",
         "typescript": "^4.7.4",
         "dayjs": "^1.11.3",
         "vue": "^2.6.14",
