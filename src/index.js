@@ -17,17 +17,17 @@ require.config({
         },
         {
             name: "vue-router-module",
-            location: "https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.4.3",
+            location: "https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.6.5",
             main: "vue-router" + debugSuffix
         },
         {
             name: "vuex",
-            location: "https://cdnjs.cloudflare.com/ajax/libs/vuex/3.5.1",
+            location: "https://cdnjs.cloudflare.com/ajax/libs/vuex/3.6.2",
             main: "vuex" + debugSuffix
         },
         {
             name: "dayjs",
-            location: "https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.8.34",
+            location: "https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.7",
             main: "dayjs.min"
         },
         {
@@ -37,7 +37,7 @@ require.config({
         },
         {
             name: "vue-class-component",
-            location: "https://cdn.jsdelivr.net/npm/vue-class-component@7.2.5",
+            location: "https://cdn.jsdelivr.net/npm/vue-class-component@7.2.6",
             main: "dist/vue-class-component" + debugSuffix
         },
         {

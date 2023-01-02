@@ -12,6 +12,7 @@
             "es2015",
             "dom"
         ],
+        "types": ["requirejs"],
         "outFile": "src/bundle.js"
     }
 }
