@@ -15,7 +15,7 @@
     "devDependencies": {
         "@types/highlight.js": "^10.1.0",
         "@types/markdown-it": "^13.0.6",
-        "@types/punycode": "^2.1.1",
+        "@types/punycode": "^2.1.2",
         "@types/requirejs": "^2.1.37",
         "browser-sync": "^2.29.3",
         "connect-history-api-fallback": "^2.0.0",
