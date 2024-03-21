@@ -19,7 +19,7 @@
         "@types/requirejs": "^2.1.37",
         "browser-sync": "^3.0.2",
         "connect-history-api-fallback": "^2.0.0",
-        "typescript": "^5.4.2",
+        "typescript": "^5.4.3",
         "dayjs": "^1.11.10",
         "vue": "^2.7.16",
         "vue-class-component": "^7.2.6",
