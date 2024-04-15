@@ -14,7 +14,7 @@
     },
     "devDependencies": {
         "@types/highlight.js": "^10.1.0",
-        "@types/markdown-it": "^14.0.0",
+        "@types/markdown-it": "^14.0.1",
         "@types/punycode": "^2.1.4",
         "@types/requirejs": "^2.1.37",
         "browser-sync": "^3.0.2",
