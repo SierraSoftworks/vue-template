@@ -20,7 +20,7 @@
         "browser-sync": "^3.0.4",
         "connect-history-api-fallback": "^2.0.0",
         "typescript": "^5.9.2",
-        "dayjs": "^1.11.13",
+        "dayjs": "^1.11.14",
         "vue": "^2.7.16",
         "vue-class-component": "^7.2.6",
         "vue-router": "^3.6.5",
