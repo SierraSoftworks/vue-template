@@ -25,7 +25,7 @@ export const app = new Vue({
         username(): string {
             return (this as any).$store.state.username
         },
-        error(): Error {
+        error(): Error | null {
             return (this as any).$store.state.requestError
         }
     },

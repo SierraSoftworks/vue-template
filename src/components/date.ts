@@ -21,10 +21,11 @@ Vue.component("date", {
             return (this as any).$store.state.utc
         },
         formatted(): string {
+            const vm = this as any
             if (this.utc_enabled)
-                return dayjs.utc((this as any).value).format((this as any).format)
+                return dayjs.utc(vm.value).format(vm.format)
             else
-                return dayjs.utc((this as any).value).local().format((this as any).format)
+                return dayjs.utc(vm.value).local().format(vm.format)
         }
     }
 })
