@@ -13,6 +13,11 @@
             "dom"
         ],
         "types": ["requirejs"],
-        "outFile": "src/bundle.js"
+        "rootDir": "./src",
+        "outFile": "src/bundle.js",
+        "ignoreDeprecations": "6.0",
+        "noImplicitAny": false,
+        "strictNullChecks": false,
+        "skipLibCheck": true
     }
 }

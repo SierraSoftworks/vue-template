@@ -1,6 +1,6 @@
 import Vue from "vue";
 import * as dayjs from "dayjs";
-import * as utc from "dayjs/plugin/utc";
+import utc = require("dayjs/plugin/utc");
 
 dayjs.extend(utc)
 
@@ -17,14 +17,15 @@ Vue.component("date", {
         }
     },
     computed: {
-        utc_enabled() {
-            return this.$store.state.utc
+        utc_enabled(): boolean {
+            return (this as any).$store.state.utc
         },
-        formatted() {
+        formatted(): string {
+            const vm = this as any
             if (this.utc_enabled)
-                return dayjs.utc(this.value).format(this.format)
+                return dayjs.utc(vm.value).format(vm.format)
             else
-                return dayjs.utc(this.value).local().format(this.format)
+                return dayjs.utc(vm.value).local().format(vm.format)
         }
     }
 })
