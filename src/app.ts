@@ -15,24 +15,24 @@ export const app = new Vue({
     store,
     router,
     computed: {
-        loading() {
-            return this.$store.state.loading
+        loading(): boolean {
+            return (this as any).$store.state.loading
         },
-        api() {
-            return this.$store.state.api
+        api(): string {
+            return (this as any).$store.state.api
         },
 
-        username() {
-            return this.$store.state.username
+        username(): string {
+            return (this as any).$store.state.username
         },
-        error() {
-            return this.$store.state.requestError
+        error(): Error {
+            return (this as any).$store.state.requestError
         }
     },
     watch: {
         error(err) {
             if (!err) return
-            this.$notify.error({
+            (this as any).$notify.error({
                 title: `${err.code || 500} ${err.name || 'Server Error'}`,
                 message: err.message || err,
                 duration: 0
