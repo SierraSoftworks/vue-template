@@ -5,12 +5,25 @@
     <title>vue-template</title>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/element-ui/2.13.2/theme-chalk/index.css"
-        integrity="sha512-VlhqjPbpqx8fc5LrtBpKJuYMuqrNzFq9oOPV5IVDEirfWaaR4avnmOnLOCGzO1NmVkmVlJ/Xzr+gf+XBd6WfXQ=="
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/element-ui/2.15.12/theme-chalk/index.css"
         crossorigin="anonymous" />
     <link rel="stylesheet" href="/index.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="importmap">
+    {
+        "imports": {
+            "vue": "https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.esm.browser.js",
+            "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@3.6.5/dist/vue-router.esm.browser.js",
+            "vuex": "https://cdn.jsdelivr.net/npm/vuex@3.6.2/dist/vuex.esm.browser.js",
+            "vue-class-component": "https://cdn.jsdelivr.net/npm/vue-class-component@7.2.6/dist/vue-class-component.esm.js",
+            "dayjs": "https://cdn.jsdelivr.net/npm/dayjs@1.11.21/dayjs.min.js",
+            "highlight.js": "https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/es/index.js",
+            "highlight-js": "https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/es/index.js",
+            "markdown-it": "https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.mjs"
+        }
+    }
+    </script>
 </head>
 
 <body>
@@ -44,10 +57,9 @@
         </el-container>
 
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"
-        integrity="sha256-1fEPhSsRKlFKGfK3eO710tEweHh1fwokU5wFGDHO+vg=" crossorigin="anonymous"
-        data-main="/index.js"></script>
-    <script src="/bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/element-ui/2.15.12/index.js"
+        crossorigin="anonymous"></script>
+    <script type="module" src="/index.js"></script>
 </body>
 
 </html>
