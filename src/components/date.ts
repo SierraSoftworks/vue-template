@@ -1,6 +1,6 @@
 import Vue from "vue";
 import * as dayjs from "dayjs";
-import utc = require("dayjs/plugin/utc");
+import utc from "dayjs/plugin/utc";
 
 dayjs.extend(utc)
 

@@ -1,1 +1,3 @@
-bundle.js
+*.js
+!/index.js
+!/vendor/*.js

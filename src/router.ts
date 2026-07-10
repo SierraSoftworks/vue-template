@@ -21,11 +21,7 @@ function routeProps(route: Route) {
  * @param module The path of the module that the component is defined in
  */
 function asyncComponent(module: string) {
-    return () => new Promise((resolve) => {
-        requirejs([module], function(component) {
-            resolve(component.default)
-        })
-    })
+    return () => import(`./${module}.js`).then((m: any) => m.default)
 }
 
 const routes = [

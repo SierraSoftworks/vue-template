@@ -3,21 +3,23 @@
         "src/**/*.ts"
     ],
     "compilerOptions": {
-        "target": "es6",
-        "module": "amd",
-        "moduleResolution": "node",
+        "target": "es2015",
+        "module": "esnext",
+        "moduleResolution": "bundler",
         "experimentalDecorators": true,
         "allowJs": true,
+        "esModuleInterop": true,
         "lib": [
             "es2015",
             "dom"
         ],
-        "types": ["requirejs"],
         "rootDir": "./src",
-        "outFile": "src/bundle.js",
-        "ignoreDeprecations": "6.0",
         "noImplicitAny": false,
         "strictNullChecks": false,
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "paths": {
+            "vuex": ["./node_modules/vuex/types/index.d.ts"],
+            "vuex/*": ["./node_modules/vuex/types/*"]
+        }
     }
 }

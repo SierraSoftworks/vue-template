@@ -15,5 +15,5 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 ADD src /app
 
-# Add the compiled bundle
-COPY --from=0 /app/src/bundle.js /app
+# Add the compiled application output
+COPY --from=0 /app/src /app
