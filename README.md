@@ -9,6 +9,7 @@ uses Vite for development and production builds without Babel or Webpack.
 
 - TypeScript 7
 - Vue 3
+- Element Plus
 - Pinia
 - Vue Router
 - Vite
@@ -30,5 +31,6 @@ locally with `npm run preview`.
   endpoint example.
 - `src/components` contains reusable Vue components, including an API status
   component which demonstrates how views, Pinia, and the API client fit
-  together.
+  together. Element Plus is registered globally, so its components are
+  available in templates without local imports.
 - `src/views` contains the routed pages which compose those components.

@@ -33,8 +33,8 @@ async function checkHealth() {
             Connected to an API started <DateTime :value="health.started" />.
         </p>
         <p v-else>Use this example to connect the view, store, and typed API client.</p>
-        <button type="button" :disabled="store.loading" @click="checkHealth">
-            {{ store.loading ? "Checking…" : "Check API" }}
-        </button>
+        <el-button type="primary" :loading="store.loading" @click="checkHealth">
+            Check API
+        </el-button>
     </section>
 </template>
