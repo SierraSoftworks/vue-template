@@ -23,3 +23,12 @@ npm run dev
 
 Create an optimized production build with `npm run build`, or preview it
 locally with `npm run preview`.
+
+## Example structure
+
+- `src/api` contains a typed API client, response handling, and a health-check
+  endpoint example.
+- `src/components` contains reusable Vue components, including an API status
+  component which demonstrates how views, Pinia, and the API client fit
+  together.
+- `src/views` contains the routed pages which compose those components.
