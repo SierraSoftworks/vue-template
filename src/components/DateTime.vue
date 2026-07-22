@@ -1,7 +1,11 @@
 <script setup lang="ts">
 import { computed } from "vue"
 
+/**
+ * A date-like value displayed using the visitor's locale.
+ */
 const props = defineProps<{
+    /** A Date, parseable date string, or Unix timestamp in milliseconds. */
     value: Date | string | number
 }>()
 
