@@ -1,25 +1,14 @@
 {
-    "include": [
-        "src/**/*.ts"
-    ],
+    "include": ["src/**/*.ts", "src/**/*.vue", "vite.config.ts"],
     "compilerOptions": {
-        "target": "es2015",
-        "module": "esnext",
+        "target": "ES2022",
+        "module": "ESNext",
         "moduleResolution": "bundler",
-        "experimentalDecorators": true,
-        "allowJs": true,
         "esModuleInterop": true,
-        "lib": [
-            "es2015",
-            "dom"
-        ],
-        "rootDir": "./src",
-        "noImplicitAny": false,
-        "strictNullChecks": false,
+        "lib": ["ES2022", "DOM", "DOM.Iterable"],
+        "noEmit": true,
+        "strict": true,
         "skipLibCheck": true,
-        "paths": {
-            "vuex": ["./node_modules/vuex/types/index.d.ts"],
-            "vuex/*": ["./node_modules/vuex/types/*"]
-        }
+        "types": ["vite/client"]
     }
 }

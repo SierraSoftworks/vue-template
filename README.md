@@ -1,31 +1,25 @@
-# vue-template [![Build Status](https://travis-ci.org/SierraSoftworks/vue-template.svg?branch=master)](https://travis-ci.org/SierraSoftworks/vue-template)
+# vue-template
 
 **An ultra-lightweight Vue web application template**
 
-This template tries to push the limits of how light a Vue application can
-be while still offering an extensive set of features. It tries its best to
-avoid having heavy devlopment dependencies (like WebPack and Babel) while
-still allowing you to write your code in TypeScript and make use of some of
-the great libraries available for Vue.js.
+This template provides a small, fast starting point for Vue applications. It
+uses Vite for development and production builds without Babel or Webpack.
 
 ## Features
 
-- TypeScript
-- Vue.js
-- ElementUI
-- Vue-Router
-- Vuex
-- Material Icons
-- Markdown Support
-- Browser-Sync
+- TypeScript 7
+- Vue 3
+- Pinia
+- Vue Router
+- Vite
 - Builds a Docker container
-
-There are also a number of example filters, components and views to showcase
-how to use the template, not to mention a store implementation and API client.
 
 ## Development
 
 ```bash
-npm install # Install everything you need
-npm start # Start up Browser-Sync to automatically refresh when changes are made
+npm install
+npm run dev
 ```
+
+Create an optimized production build with `npm run build`, or preview it
+locally with `npm run preview`.

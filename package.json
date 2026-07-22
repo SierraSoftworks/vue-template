@@ -1,7 +1,7 @@
 {
     "name": "vue-template",
     "version": "1.0.0",
-    "description": "A template which shows how a Vue website can be built without the need for Babel or WebPack",
+    "description": "An ultra-lightweight Vue 3 application template powered by Vite and TypeScript",
     "author": "Benjamin Pannell <admin@sierrasoftworks.com>",
     "repository": {
         "type": "git",
@@ -9,22 +9,21 @@
     },
     "license": "MIT",
     "scripts": {
-        "start": "node dev.js",
-        "build": "tsc"
+        "start": "vite",
+        "dev": "vite",
+        "build": "tsc --noEmit && vite build",
+        "preview": "vite preview"
     },
     "devDependencies": {
-        "@types/highlight.js": "^10.1.0",
-        "@types/markdown-it": "^14.1.2",
-        "@types/punycode": "^2.1.4",
-        "@types/requirejs": "^2.1.37",
-        "browser-sync": "^3.0.4",
-        "connect-history-api-fallback": "^2.0.0",
+        "@vitejs/plugin-vue": "^6.0.8",
         "typescript": "^7.0.2",
-        "dayjs": "^1.11.21",
-        "vue": "^2.7.16",
-        "vue-class-component": "^7.2.6",
-        "vue-router": "^3.6.5",
-        "vuex": "^3.6.2"
+        "vite": "^8.1.5"
     },
-    "dependencies": {}
+    "dependencies": {
+        "pinia": "^4.0.2",
+        "vue": "^3.5.40",
+        "vue-router": "^5.2.0",
+        "vue": "^3.5.40",
+        "vue-router": "^5.2.0"
+    }
 }

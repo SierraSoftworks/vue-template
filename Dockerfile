@@ -1,9 +1,9 @@
-FROM node:alpine
-
-ADD . /app
+FROM node:alpine AS build
 
 WORKDIR /app
-RUN ["npm", "install"]
+COPY package.json package-lock.json ./
+RUN ["npm", "ci"]
+COPY . .
 RUN ["npm", "run", "build"]
 
 FROM nginx:alpine
@@ -13,7 +13,4 @@ LABEL version=$VERSION
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-ADD src /app
-
-# Add the compiled application output
-COPY --from=0 /app/src /app
+COPY --from=build /app/dist /app
