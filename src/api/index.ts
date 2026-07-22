@@ -1,4 +1,3 @@
-import * as helpers from "./helpers"
-export {helpers}
-
-export {getHealth} from "./health"
+export * from "./client"
+export * from "./health"
+export * from "./helpers"

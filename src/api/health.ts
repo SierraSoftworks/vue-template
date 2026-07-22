@@ -1,14 +1,20 @@
-import {store} from "../store";
-import * as helpers from "./helpers";
+import type { ApiClient } from "./client"
 
+/**
+ * Health information returned by the example API endpoint.
+ */
 export interface Health {
-    started: Date;
+    /** ISO 8601 timestamp at which the API started. */
+    started: string
 }
 
 /**
- * Queries the API server for its current health status
+ * Fetches the current API health information.
+ *
+ * @param client Configured API client to use for the request.
+ * @returns The API health information.
+ * @throws {@link ApiError} when the request is unsuccessful.
  */
-export function getHealth() {
-    return fetch(helpers.buildUrl(store.state.api, "/api/v1/healthz"))
-        .then(res => helpers.apiHandleResponse<Health>(res, true))
+export function getHealth(client: ApiClient) {
+    return client.get<Health>("/api/v1/healthz")
 }
