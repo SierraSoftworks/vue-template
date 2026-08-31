@@ -9,6 +9,10 @@ on:
   schedule:
     - cron: '0 23 * * 5'
 
+permissions:
+  contents: read
+  security-events: write
+
 jobs:
   analyse:
     name: Analyse
