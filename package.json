@@ -20,7 +20,7 @@
         "vite": "^8.3.0"
     },
     "dependencies": {
-        "element-plus": "^2.14.5",
+        "element-plus": "^2.14.6",
         "pinia": "^4.0.3",
         "vue": "^3.5.43",
         "vue-router": "^5.3.1"
